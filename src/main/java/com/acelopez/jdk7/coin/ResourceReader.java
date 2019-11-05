@@ -1,6 +1,7 @@
 package com.acelopez.jdk7.coin;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * Define la estructura para los lectores de recursos...
@@ -11,7 +12,7 @@ public interface ResourceReader {
     /**
      * Lee datos de un recurso.
      */
-    public void read() throws IOException;
+    public void read() throws IOException, SQLException;
 
     /**
      * Libera recursos usados.

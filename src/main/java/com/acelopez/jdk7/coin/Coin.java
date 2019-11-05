@@ -1,6 +1,7 @@
 package com.acelopez.jdk7.coin;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Map;
 
 /**
@@ -23,7 +24,7 @@ public class Coin {
 
 
     /**
-     * Permite obtener le identificador del proveedor pasado por param.
+     * Permite obtener el identificador del proveedor pasado por param.
      *
      * @param pVendor Nombre de algún proveedor.
      * @return Identificador para ese proveedor o -1 si el proveedor no existe.
@@ -54,7 +55,7 @@ public class Coin {
             reader.read();
         } catch (IOException ex) {
             ex.printStackTrace();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             try {

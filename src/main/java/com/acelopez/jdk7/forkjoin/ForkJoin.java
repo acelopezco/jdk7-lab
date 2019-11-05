@@ -38,7 +38,8 @@ public class ForkJoin {
         int processors = Runtime.getRuntime().availableProcessors();
         System.out.printf("%d " + (processors != 1 ? "procesadores disponibles" : " procesador disponible") + "\n", processors);
 
-        ForkSum fs = new ForkSum();
+        int[] array = getArreglo();
+        ForkSum fs = new ForkSum(array, 0, array.length);
         ForkJoinPool pool = new ForkJoinPool();
         pool.invoke(fs);
     }
