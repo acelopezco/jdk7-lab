@@ -41,7 +41,7 @@ public class Nio2 {
      * @param strPath Ruta de la que se desea conocer la cantidad de elementos que la componen.
      * @return Cantidad de elementos que componen la ruta pasada por param o cero si la ruta es nula.
      */
-    public static int getPathSize(String strPath) {
+    public static int getPathCount(String strPath) {
         //TODO: Implementar este método
 
         return 0;

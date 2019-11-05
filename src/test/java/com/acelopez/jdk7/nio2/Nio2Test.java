@@ -1,6 +1,5 @@
 package com.acelopez.jdk7.nio2;
 
-import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 import java.io.File;
@@ -8,7 +7,6 @@ import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -63,7 +61,7 @@ public class Nio2Test {
     @Test
     public void test_path_size() {
 
-        int size = Nio2.getPathSize(RELATIVE_TXT_FILE_PATH);
+        int size = Nio2.getPathCount(RELATIVE_TXT_FILE_PATH);
 
         assertThat(size, is(3));
     }
@@ -71,7 +69,7 @@ public class Nio2Test {
     @Test
     public void test_path_size_from_null() {
 
-        int size = Nio2.getPathSize(null);
+        int size = Nio2.getPathCount(null);
 
         assertThat(size, is(0));
     }
